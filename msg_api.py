@@ -113,7 +113,7 @@ def preprocess_image(img_path, target_size=(150, 150)):
 
 # Function to update message on the API endpoint
 def update_message_on_api(message):
-    payload = {'message': f'Predicted class: {message}'}
+    payload = {'message': f'{message}'}
     response = requests.post(message_api_url, data=payload)
     if response.status_code == 200:
         print("Message updated successfully on the API")
