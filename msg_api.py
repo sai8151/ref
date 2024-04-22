@@ -101,8 +101,8 @@ def predict_class_from_image():
     prediction = model.predict(test_image)
     predicted_class_idx = np.argmax(prediction)
     predicted_class = label_encoder.inverse_transform([predicted_class_idx])[0]
-    print("predicted_class : "+predicted_class)
-    return predicted_class
+    print("the vegetables in refrigerator are : "+predicted_class)
+    return "the vegetables in refrigerator are "+predicted_class
 
 # Function to preprocess image
 def preprocess_image(img_path, target_size=(150, 150)):
